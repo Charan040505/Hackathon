@@ -17,16 +17,15 @@ Inventory Management Dashboard is a full-stack web application that helps users 
 
 - Add, update, delete, and search items  
 - Supplier management  
-- Action logs with timestamps  
-- QR code generation and scanning  
-- Import/export item data in CSV format  
+- Action logs with timestamps
+- statistical representation 
 
 ## Technologies Used
 
 - **Frontend:** HTML,CSS,JS (hosted on Vercel)  
 - **Backend:** Node.js, Express.js (hosted on Render)  
 - **Database:** MongoDB Atlas  
-- **Other:** Multer, QRCode, Twilio, CORS  
+- **Other:** Multer,Twilio, CORS  
 
 ## Installation
 
