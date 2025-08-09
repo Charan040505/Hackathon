@@ -64,7 +64,7 @@
 <script>
   async function loadLogs() {
     try {
-      const response = await fetch("http://localhost:5000/api/logs");
+      const response = await fetch("https://imd-1.onrender.com/api/logs");
       const logs = await response.json();
       const tableBody = document.getElementById("logsTableBody");
       const noLogsMsg = document.getElementById("noLogsMessage");

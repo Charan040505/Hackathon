@@ -73,7 +73,7 @@
 <script>
   async function loadSummary() {
     try {
-      const res = await fetch("http://localhost:5000/api/items/summary-by-category");
+      const res = await fetch("https://imd-1.onrender.com/api/items/summary-by-category");
       const data = await res.json();
 
       const tableBody = document.getElementById("summaryTableBody");
@@ -159,7 +159,7 @@
 
   async function checkLowStock() {
     try {
-      const res = await fetch("http://localhost:5000/api/items/lowstock");
+      const res = await fetch("https://imd-1.onrender.com/api/items/lowstock");
       const items = await res.json();
       const alertBox = document.getElementById("lowStockAlert");
 
