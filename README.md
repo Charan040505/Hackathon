@@ -55,7 +55,7 @@ JWT_SECRET=your_jwt_secret
 ### Running Backend Locally
 
 ```bash
-npm run start-backend
+node server.js
 ```
 
 *Make sure your MongoDB URI and other env variables are correctly set.*
@@ -65,9 +65,8 @@ npm run start-backend
 If your frontend is in a separate folder (e.g., `/client`), navigate there and run:
 
 ```bash
-cd client
-npm install
-npm run dev
+cd frontend
+npx serve . -p 3000
 ```
 
 ---
