@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventory Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-section {
+      padding: 60px 0;
+      text-align: center;
+      background: linear-gradient(to right, #007bff, #6f42c1);
+      color: white;
+    }
+
+    .welcome-section h2 {
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+
+    .nav-list {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .nav-list li {
+      margin-bottom: 15px;
+    }
+
+    .nav-list a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #007bff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-list a:hover {
+      color: #0056b3;
+    }
+
+    .logout-btn {
+      color: #dc3545 !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Inventory System</a>
+      <button class="btn btn-light ms-auto" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Welcome Section -->
+  <div class="welcome-section">
+    <h2>Welcome to Inventory Dashboard</h2>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="nav-list">
+    <ul class="text-center">
+      <li><a href="items.html">📦 Manage Items</a></li>
+      <li><a href="suppliers.html">🏢 Manage Suppliers</a></li>
+      <li><a href="logs.html">🕒 View Logs</a></li>
+      <li><a href="import.html">📊 Items Analytics</a></li>
+      <li><a href="#" class="logout-btn" onclick="logout()">🚪 Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+</html>
