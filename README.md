@@ -1,1 +1,1 @@
-# Hackathon
+# Inventory Management Dashboard
