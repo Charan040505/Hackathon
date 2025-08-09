@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Enable CORS with specific frontend origin and credentials support
 app.use(cors({
-  origin: 'https://imd-khaki.vercel.app',  // Replace with your frontend URL
+  origin: 'https://imd-khaki.vercel.app',  // Your frontend URL
   credentials: true
 }));
 
@@ -34,6 +34,11 @@ const supplierRoutes = require('./routes/supplierRoutes');
 app.use('/api/suppliers', supplierRoutes);
 const logRoutes = require('./routes/logRoutes');
 app.use('/api/logs', logRoutes);
+
+// Simple homepage route to confirm backend is running
+app.get('/', (req, res) => {
+  res.send('Inventory Management Backend is running!');
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
